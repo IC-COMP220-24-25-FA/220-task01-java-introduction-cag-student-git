@@ -30,6 +30,10 @@ public class RectangleTest {
         Rectangle myRectangle = new Rectangle(1, 1);
         myRectangle.doubleSize();
         assertEquals(2, myRectangle.calcArea(), 0.0001);
+
+        myRectangle = new Rectangle(1, 2);
+        myRectangle.doubleSize();
+        assertEquals(4, myRectangle.calcArea(), 0.0001);
     }
 
     @Test
