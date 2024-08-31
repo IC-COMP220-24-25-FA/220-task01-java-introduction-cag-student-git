@@ -16,13 +16,14 @@ public class Rectangle {
 
     public void doubleSize(){
         // throw new RuntimeException("Not implemented yet");
-        double rectangle_size = length*width;
+        double rectangle_size = length*width*2;
         this.length = Math.sqrt(rectangle_size);
         this.width = Math.sqrt(rectangle_size);
     }
 
     public double longestLineWithin(){
-        throw new RuntimeException("Not implemented yet");
+        // throw new RuntimeException("Not implemented yet");
+        if (this.length > this.width)
     }
     
 }
