@@ -27,7 +27,9 @@ public class RectangleTest {
 
     @Test
     public void doubleSize(){
-
+        Rectangle myRectangle = new Rectangle(1, 1);
+        myRectangle.doubleSize();
+        assertEquals(2, myRectangle.calcArea(), 0.0001);
     }
 
     @Test

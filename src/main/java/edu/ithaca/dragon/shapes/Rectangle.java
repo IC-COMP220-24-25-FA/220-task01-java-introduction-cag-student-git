@@ -3,10 +3,12 @@ package edu.ithaca.dragon.shapes;
 public class Rectangle {
     private double length;
     private double width;
+    private double rectangle_size;
 
     public Rectangle(double length, double width){
         this.length = length;
         this.width = width;
+        this.rectangle_size = this.calcArea();
     }
 
     public double calcArea(){
@@ -16,7 +18,7 @@ public class Rectangle {
 
     public void doubleSize(){
         // throw new RuntimeException("Not implemented yet");
-        double rectangle_size = length*width*2;
+        double rectangle_size = this.calcArea() * 2;
         this.length = Math.sqrt(rectangle_size);
         this.width = Math.sqrt(rectangle_size);
     }
