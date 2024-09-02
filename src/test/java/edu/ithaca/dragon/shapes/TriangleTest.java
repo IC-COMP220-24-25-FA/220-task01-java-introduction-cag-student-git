@@ -20,7 +20,9 @@ public class TriangleTest {
 
     @Test
     public void doubleSizeTest(){
-        // Not implemented yet
+        Triangle myTriangle = new Triangle(2, 2);
+        myTriangle.doubleSize();
+        assertEquals(4, myTriangle.calcArea(), 0.001);
     }
 
     @Test
