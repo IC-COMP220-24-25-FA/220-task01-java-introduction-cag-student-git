@@ -6,7 +6,9 @@ public class Triangle {
     private double triangle_size;
 
     public Triangle(double triangle_base, double triangle_height){
-        // Not implemented yet
+        base = triangle_base;
+        height = triangle_height;
+        triangle_size = (triangle_base*triangle_height)/2;
     }
 
     public double calcArea(){
