@@ -12,7 +12,7 @@ public class Triangle {
     }
 
     public double calcArea(){
-        // Not implemented yet
+        return (base*height)/2;
     }
 
     public void doubleSize(){
