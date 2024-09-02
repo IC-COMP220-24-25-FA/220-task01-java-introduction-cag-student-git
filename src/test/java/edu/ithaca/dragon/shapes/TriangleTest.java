@@ -11,7 +11,11 @@ public class TriangleTest {
 
     @Test
     public void calcAreaTest(){
-        // Not implemented yet
+        Triangle myTriangle = new Triangle(2, 4);
+        assertEquals(4, myTriangle.calcArea(), 0.001);
+
+        myTriangle = new Triangle(1, 0.5);
+        assertEquals(0.25, myTriangle.calcArea(), 0.001);
     }
 
     @Test
