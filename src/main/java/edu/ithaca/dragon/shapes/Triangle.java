@@ -16,7 +16,9 @@ public class Triangle {
     }
 
     public void doubleSize(){
-        // Not implemented yet
+        triangle_size = triangle_size*2;
+        base = Math.sqrt(triangle_size);
+        height = Math.sqrt(triangle_size);
     }
 
     public double longestLineWithin(){
