@@ -7,20 +7,20 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class TriangleTest() {
+public class TriangleTest {
 
     @Test
-    private void calcAreaTest(){
+    public void calcAreaTest(){
         // Not implemented yet
     }
 
     @Test
-    private void doubleSizeTest(){
+    public void doubleSizeTest(){
         // Not implemented yet
     }
 
     @Test
-    private void longestLineWithinTest(){
+    public void longestLineWithinTest(){
         // Not implemented yet
     }
 }
