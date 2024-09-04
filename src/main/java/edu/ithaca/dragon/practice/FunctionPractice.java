@@ -58,13 +58,15 @@ public class FunctionPractice {
      */
     public static int findFirstLargest(List<Integer> numbers){
         int i = 0;
+        int largest_number_index = 0;
         int largest_number = numbers.get(0);
         for (i = 0; i < numbers.size(); i++) {
             if (numbers.get(i) > largest_number) {
                 largest_number = numbers.get(i);
+                largest_number_index = i;
             }
         }
-        return largest_number;
+        return largest_number_index;
     }
 
     /**
