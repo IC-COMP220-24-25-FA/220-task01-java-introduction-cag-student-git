@@ -70,8 +70,8 @@ public class FunctionPracticeTest {
         List<String> testList = new ArrayList<String>();
         testList.add("a");
         testList.add("aa");
-        testList.add("aaa");
+        testList.add("add");
         testList.add("aa");
-        assertEquals("aaa", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'a'));
+        assertEquals("add", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'd'));
     }
 }
