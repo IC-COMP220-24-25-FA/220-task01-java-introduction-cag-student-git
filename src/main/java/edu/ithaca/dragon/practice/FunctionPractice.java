@@ -57,7 +57,14 @@ public class FunctionPractice {
      * If the largest number occurs more than once, return the index of the first occurence.
      */
     public static int findFirstLargest(List<Integer> numbers){
-        throw new RuntimeException("Not Implemented");
+        int i = 0;
+        int largest_number = numbers.get(0);
+        for (i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) > largest_number) {
+                largest_number = numbers.get(i);
+            }
+        }
+        return largest_number;
     }
 
     /**
