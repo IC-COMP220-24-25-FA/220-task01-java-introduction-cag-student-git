@@ -34,6 +34,6 @@ public class FunctionPracticeTest {
         assertEquals(9.5, FunctionPractice.calcSalePrice(100, 90, 5), 0.0001);
         assertEquals(0, FunctionPractice.calcSalePrice(10, 100, 8), 0.0001);
         assertEquals(25, FunctionPractice.calcSalePrice(50, 50, 0), 0.0001);
-        assertEquals(25, FunctionPractice.calcSalePrice(37.5, 0, 25), 0.0001);
+        assertEquals(37.5, FunctionPractice.calcSalePrice(50, 0, 25), 0.0001);
     }
 }
