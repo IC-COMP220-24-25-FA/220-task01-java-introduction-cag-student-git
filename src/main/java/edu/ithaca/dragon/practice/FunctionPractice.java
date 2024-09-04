@@ -57,6 +57,9 @@ public class FunctionPractice {
      * If the largest number occurs more than once, return the index of the first occurence.
      */
     public static int findFirstLargest(List<Integer> numbers){
+        if (numbers.size() == 0) {
+            throw new IllegalArgumentException();
+        }
         int i = 0;
         int largest_number_index = 0;
         int largest_number = numbers.get(0);
@@ -74,7 +77,19 @@ public class FunctionPractice {
      * If the largest number occurs more than once, return the index of the last occurence.
      */
     public static int findLastLargest(List<Integer> numbers){
-        throw new RuntimeException("Not Implemented");
+        if (numbers.size() == 0) {
+            throw new IllegalArgumentException();
+        }
+        int i = 0;
+        int largest_number_index = 0;
+        int largest_number = numbers.get(0);
+        for (i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) > largest_number) {
+                largest_number = numbers.get(i);
+                largest_number_index = i;
+            }
+        }
+        return largest_number_index;
     }
 
     /**
