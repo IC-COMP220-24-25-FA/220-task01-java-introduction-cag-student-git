@@ -65,13 +65,13 @@ public class FunctionPracticeTest {
         assertEquals(3, FunctionPractice.findLastLargest(testList));
     }
 
-    // @Test
-    // public void findFirstMostOccurencesOfLetterTest(){
-    //     List<String> testList = new ArrayList<String>();
-    //     testList.add("a");
-    //     testList.add("aa");
-    //     testList.add("aaa");
-    //     testList.add("aa");
-    //     assertEquals(2, FunctionPractice.findFirstMostOccurencesOfLetter(testList));
-    // }
+    @Test
+    public void findFirstMostOccurencesOfLetterTest(){
+        List<String> testList = new ArrayList<String>();
+        testList.add("a");
+        testList.add("aa");
+        testList.add("aaa");
+        testList.add("aa");
+        assertEquals("aaa", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'a'));
+    }
 }
