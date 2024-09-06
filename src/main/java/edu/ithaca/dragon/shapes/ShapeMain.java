@@ -75,7 +75,7 @@ public class ShapeMain {
         System.out.println("Test");
         List<Shape> shapeList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            double random_choice = Math.random() * 2;
+            double random_choice = Math.random() * 3;
             int random_shape = (int) Math.floor(random_choice);
             if (random_shape == 0) {
                 Shape new_shape = new Circle(Math.random()*10);
@@ -89,7 +89,7 @@ public class ShapeMain {
                 String info_string = shapeList.get(i).toString();
                 System.out.println(info_string);
             }
-            else if (random_shape == 2) {
+            else {
                 Shape new_shape = new Triangle(Math.random()*10, Math.random()*10);
                 shapeList.add(i, new_shape);
                 String info_string = shapeList.get(i).toString();
