@@ -8,23 +8,70 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class FunctionPracticeTest {
 
     @Test
     public void largestOfThreeTest(){
+        // Check that the largest of the three values of 5, which is the largest inputted
         assertEquals(5, FunctionPractice.largestOfThree(4, 5, 2));
+        // Same as above, but the largest input (5), is in a different parameter
         assertEquals(5, FunctionPractice.largestOfThree(5, 4, 2));
+        // Same as above, but the largest input (5), is in a different parameter
         assertEquals(5, FunctionPractice.largestOfThree(4, 2, 5));
+        // Check that the program returns the correct value when all inputs are identical
         assertEquals(5, FunctionPractice.largestOfThree(5, 5, 5));
 
+        // Check that the program returns an error when a negative value is inputted in all positions
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(-1, -1, -1));
+        // Check that the program returns an error when a negative value is inputted in at least one position
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(5, -1, 3));
+        // Check that the program returns an error when a negative value is inputted in at least one position, but in a differnt parameter
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(5, 3, -1));
     }
 
     @Test
     public void calcSalePriceTest(){
-        fail("Not implemented yet");
+        assertEquals(9.5, FunctionPractice.calcSalePrice(100, 90, 5), 0.0001);
+        assertEquals(0, FunctionPractice.calcSalePrice(10, 100, 8), 0.0001);
+        assertEquals(25, FunctionPractice.calcSalePrice(50, 50, 0), 0.0001);
+        assertEquals(37.5, FunctionPractice.calcSalePrice(50, 0, 25), 0.0001);
     }
-    
+
+    // @Test
+    // public void isGoodDogTest(){
+    //     assertEquals(STR, STR);
+    // }
+
+    @Test
+    public void findFirstLargestTest(){
+        List<Integer> testList = new ArrayList<Integer>();
+        testList.add(1);
+        testList.add(2);
+        testList.add(3);
+        testList.add(3);
+        assertEquals(2, FunctionPractice.findFirstLargest(testList));
+    }
+
+    @Test
+    public void findLastLargestTest(){
+        List<Integer> testList = new ArrayList<Integer>();
+        testList.add(1);
+        testList.add(2);
+        testList.add(3);
+        testList.add(3);
+        assertEquals(3, FunctionPractice.findLastLargest(testList));
+    }
+
+    @Test
+    public void findFirstMostOccurencesOfLetterTest(){
+        List<String> testList = new ArrayList<String>();
+        testList.add("a");
+        testList.add("aa");
+        testList.add("add");
+        testList.add("aa");
+        assertEquals("add", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'd'));
+    }
 }
