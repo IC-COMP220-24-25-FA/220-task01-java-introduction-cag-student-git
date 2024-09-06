@@ -32,4 +32,9 @@ public class Circle {
         // throw new RuntimeException("Not implemented yet");
         return radius*2;
     }
+
+    public String toString(){
+        String info_string = "Shape: Circle | Radius:" + String.valueOf(radius);
+        return info_string;
+    }
 }

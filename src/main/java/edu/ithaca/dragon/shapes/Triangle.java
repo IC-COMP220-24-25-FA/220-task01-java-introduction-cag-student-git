@@ -29,4 +29,9 @@ public class Triangle {
             return base;
         }
     }
+
+    public String toString(){
+        String info_string = "Shape: Triangle | Base: " + String.valueOf(base) + "| Height: " + String.valueOf(height);
+        return info_string;
+    }
 }

@@ -32,5 +32,10 @@ public class Rectangle {
             return this.width;
         }
     }
+
+    public String toString(){
+        String info_string = "Shape: Rectangle | Length: " + String.valueOf(length) + "| Width: " + String.valueOf(width);
+        return info_string;
+    }
     
 }
