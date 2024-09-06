@@ -1,14 +1,14 @@
 package edu.ithaca.dragon.shapes;
 
-public class Rectangle {
+public class Rectangle implements Shape {
     private double length;
     private double width;
-    private double rectangle_size;
+    private double size;
 
     public Rectangle(double length, double width){
         this.length = length;
         this.width = width;
-        this.rectangle_size = this.calcArea();
+        this.size = this.calcArea();
     }
 
     public double calcArea(){
@@ -18,9 +18,9 @@ public class Rectangle {
 
     public void doubleSize(){
         // throw new RuntimeException("Not implemented yet");
-        double rectangle_size = this.calcArea() * 2;
-        this.length = Math.sqrt(rectangle_size);
-        this.width = Math.sqrt(rectangle_size);
+        double size = this.calcArea() * 2;
+        this.length = Math.sqrt(size);
+        this.width = Math.sqrt(size);
     }
 
     public double longestLineWithin(){

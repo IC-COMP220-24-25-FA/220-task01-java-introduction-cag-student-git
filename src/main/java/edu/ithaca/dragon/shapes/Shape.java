@@ -5,9 +5,9 @@ package edu.ithaca.dragon.shapes;
  */
 public interface Shape {
 
-    void calcArea();
+    double calcArea();
 
     void doubleSize();
 
-    void longestLineWithin();
+    double longestLineWithin();
 }

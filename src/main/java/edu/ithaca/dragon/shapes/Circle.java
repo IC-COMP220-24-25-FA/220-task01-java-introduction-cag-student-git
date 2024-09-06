@@ -1,13 +1,15 @@
 package edu.ithaca.dragon.shapes;
 
-public class Circle {
+public class Circle implements Shape {
     private double radius;
+    private double size;
 
     /**
      * @throws IllegalArgumentException if radius is not a positive number
      */
     public Circle(double radius){
         this.radius = radius;
+        this.size = this.calcArea();
     }
 
     /**
@@ -22,7 +24,9 @@ public class Circle {
      * @post doubles the size of this circle
      */
     public void doubleSize(){
-        throw new RuntimeException("Not implemented yet");
+        double new_size = this.size * 2;
+        new_size = (new_size / Math.pi);
+        this.radius = Math.sqrt(new_size);
     }
 
     /**
