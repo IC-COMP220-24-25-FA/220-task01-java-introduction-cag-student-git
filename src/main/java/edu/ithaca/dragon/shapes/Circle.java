@@ -25,7 +25,7 @@ public class Circle implements Shape {
      */
     public void doubleSize(){
         double new_size = this.size * 2;
-        new_size = (new_size / Math.pi);
+        new_size = (new_size / Math.PI);
         this.radius = Math.sqrt(new_size);
     }
 

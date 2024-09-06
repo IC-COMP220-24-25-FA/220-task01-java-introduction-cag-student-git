@@ -1,7 +1,12 @@
 package edu.ithaca.dragon.shapes;
 
 import javax.sound.midi.Receiver;
+
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import java.util.List;
+import java.util.ArrayList;
 
 public class ShapeMain {
     
@@ -62,6 +67,42 @@ public class ShapeMain {
                 System.out.println("Invalid input");
             }
         }
+
         System.out.println("Program completed.");
-        };
+
+        // List of shapes with the list interface
+
+        System.out.println("Test");
+        List<Shape> shapeList = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            double random_choice = Math.random() * 2;
+            int random_shape = (int) Math.floor(random_choice);
+            if (random_shape == 0) {
+                Shape new_shape = new Circle(Math.random()*10);
+                shapeList.add(i, new_shape);
+                String info_string = shapeList.get(i).toString();
+                System.out.println(info_string);
+            }
+            else if (random_shape == 1) {
+                Shape new_shape = new Rectangle(Math.random()*10, Math.random()*10);
+                shapeList.add(i, new_shape);
+                String info_string = shapeList.get(i).toString();
+                System.out.println(info_string);
+            }
+            else if (random_shape == 2) {
+                Shape new_shape = new Triangle(Math.random()*10, Math.random()*10);
+                shapeList.add(i, new_shape);
+                String info_string = shapeList.get(i).toString();
+                System.out.println(info_string);
+            }
+        }
+
+        // Double the size of each shape
+
+        for (int i = 0; i < 10; i++) {
+            shapeList.get(i).doubleSize();
+            String info_string = shapeList.get(i).toString();
+            System.out.println(info_string);
+        }
     }
+}
